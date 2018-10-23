@@ -2,7 +2,9 @@
 
 注意：该文档旨在让用户能够快速的将 ICP 环境部署起来，其中的安装包是基于 ICP 公开的文档和社区版 Docker 镜像制作的，并非 ICP 官方制作。
 
-两个离线包，其中一个为镜像包（3.8G, `icp-3.1.0-ce-image.tgz`），另一个为配置包（`4K`大小）。
+下载地址：https://pan.baidu.com/s/1ghPPPgv380xc0H4qq5VvBg
+
+两个离线包，其中一个为镜像包（3.8G, `icp-3.1.0-ce-image.tgz`），另一个为配置包（4K，`icp-3.1.0-ce-config.tgz`）。
 
 需要至少一台机器，CPU在4核及以上，内存6G及以上，磁盘空间20G及以上。
 
