@@ -10,6 +10,33 @@
 
 安装完成之后可以根据需求来添加和启用ICP的其他组件。
 
+该离线包里包含除Kubernetes/Etcd之外的以下 24 种服务：
+
+* auth-apikeys
+* auth-idp
+* auth-pap
+* auth-pdp
+* calico
+* catalog-ui
+* cert-manager
+* heapster
+* helm-api
+* helm-repo
+* icp-management-ingress
+* image-manager
+* image-registry
+* kube-dns(coredns)
+* mariadb
+* mgmt-repo
+* mongodb
+* nginx-ingress
+* platform-api
+* platform-ui
+* secret-watcher
+* security-onboarding
+* tiller
+* unified-router
+
 
 ## 操作系统
 
