@@ -10,7 +10,7 @@
 
 安装完成之后可以根据需求来添加和启用ICP的其他组件。
 
-该离线包里包含除Kubernetes/Etcd之外的以下 24 种服务：
+该离线包包含 Kubernetes/Etcd 和以下 24 种服务：
 
 * auth-apikeys
 * auth-idp
