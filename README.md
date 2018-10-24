@@ -6,7 +6,7 @@
 
 两个离线包，其中一个为镜像包（3.8G, `icp-3.1.0-ce-image.tgz`），另一个为配置包（4K，`icp-3.1.0-ce-config.tgz`）。
 
-需要至少一台机器，CPU在4核及以上，内存6G及以上，磁盘空间20G及以上。
+需要至少一台机器，CPU在4核及以上，内存6G及以上，磁盘空间30G及以上。
 
 安装完成之后可以根据需求来添加和启用ICP的其他组件。
 
@@ -44,6 +44,16 @@
 * Ubuntu: 16.04/18.04
 
 
+## 关闭防火墙
+
+通常是 RHEL/CentOS 防火墙会默认关闭除22以外的端口，ICP安装过程中发现这种情况就会终止安装。为了确保一次就能安装成功，所以建议先关闭防火墙，命令如下：
+
+```
+systemctl stop firewalld
+systemctl disable firewalld
+```
+
+
 ## 安装 Docker
 
 * CentOS: https://docs.docker.com/install/linux/docker-ce/centos/
@@ -79,7 +89,7 @@
 ## 在机器上安装依赖包
 
 * CentOS: yum install socat
-* Ubuntu: apt install socat
+* Ubuntu: apt install socat python
 
 ## 检查机器上的文件
 
@@ -158,6 +168,12 @@ vim /root/icp-3.1.0-ce/cluster/config.yaml
 cd /root/icp-3.1.0-ce/cluster/
 docker run -t --rm --net=host -e LICENSE=accept -v $(pwd):/installer/cluster ibmcom/icp-inception:3.1.0 addon -v
 ```
+
+## 开始使用 ICP
+
+在浏览器里打开 ICP UI 先体验一下，然后可以参考以下文档做一些简单的操作。
+
+https://www.ibm.com/support/knowledgecenter/SSBS6K_3.1.0/manage_applications/manage_workloads.html
 
 ## ICP 3.1.0 官方文档
 
