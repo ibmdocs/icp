@@ -49,6 +49,33 @@
 * CentOS: https://docs.docker.com/install/linux/docker-ce/centos/
 * Ubuntu: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
+## 配置 Docker log rotation
+
+当磁盘空间比较小时，服务运行一段时间可能就会产生很多日志，会占用相当一部分空间。这时就需要配置 log rotation 了。
+
+建议所有机器都配置一下，详细说明：https://success.docker.com/article/how-to-setup-log-rotation-post-installation
+
+简单步骤：
+
+1. 创建 /etc/docker/daemon.json 文件
+
+2. 写入以下内容
+
+    ```
+    {
+      "log-driver": "json-file",
+      "log-opts": {
+        "max-size": "80m",
+        "max-file": "3"
+      }
+    }
+    ```
+3. 重启 docker
+
+    ```
+    systemctl restart docker
+    ```
+
 ## 在机器上安装依赖包
 
 * CentOS: yum install socat
